@@ -566,7 +566,7 @@ static void repl_run(JSContext *ctx)
 
 static void help(void)
 {
-    printf("MicroQuickJS" "\n"
+    printf("MicroQuickJS version " CONFIG_VERSION "\n"
            "usage: mqjs [options] [file [args]]\n"
            "-h  --help            list options\n"
            "-e  --eval EXPR       evaluate EXPR\n"
