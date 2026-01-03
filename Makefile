@@ -27,8 +27,8 @@ endif
 
 HOST_CC=gcc
 CC=$(CROSS_PREFIX)gcc
-CFLAGS=-Wall -g -MMD -D_GNU_SOURCE -fno-math-errno -fno-trapping-math
-HOST_CFLAGS=-Wall -g -MMD -D_GNU_SOURCE -fno-math-errno -fno-trapping-math
+CFLAGS=-Wall -g -MMD -D_GNU_SOURCE -DCONFIG_VERSION=\"$(shell cat VERSION)\" -fno-math-errno -fno-trapping-math
+HOST_CFLAGS=-Wall -g -MMD -D_GNU_SOURCE -DCONFIG_VERSION=\"$(shell cat VERSION)\" -fno-math-errno -fno-trapping-math
 ifdef CONFIG_WERROR
 CFLAGS+=-Werror
 HOST_CFLAGS+=-Werror
